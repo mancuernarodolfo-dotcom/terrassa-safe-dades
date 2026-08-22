@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Terrassa Safe · validació de connexió</title>
+<style>
+  :root{
+    --tinta:#141821;
+    --paper:#f7f5f0;
+    --linia:#d6d1c4;
+    --apagat:#6f6a5e;
+    --cnn:#1f5f4f;
+    --extern:#8a6d3b;
+    --groc:#c9a227;
+    --taronja:#c96a1f;
+    --vermell:#a8302a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    background:var(--paper);color:var(--tinta);
+    font:15px/1.55 ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+    padding:24px 20px 64px;max-width:940px;margin:0 auto;
+  }
+  h1{
+    font-size:13px;letter-spacing:.16em;text-transform:uppercase;
+    font-weight:600;padding-bottom:10px;border-bottom:2px solid var(--tinta);
+  }
+  .subtitol{font-size:12px;color:var(--apagat);margin:8px 0 26px;line-height:1.6}
+
+  .estat{
+    border:1px solid var(--linia);padding:12px 14px;margin-bottom:22px;
+    font-size:12px;display:flex;gap:20px;flex-wrap:wrap;align-items:center;
+  }
+  .estat b{font-weight:600}
+  .punt{width:8px;height:8px;border-radius:50%;display:inline-block;margin-right:6px}
+  .ok{background:var(--cnn)}.ko{background:var(--vermell)}.esperant{background:var(--apagat)}
+
+  h2{
+    font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+    color:var(--apagat);margin:30px 0 12px;font-weight:600;
+  }
+
+  .dies{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .dia{border:1px solid var(--linia);padding:12px}
+  .dia .data{font-size:11px;color:var(--apagat);letter-spacing:.08em}
+  .dia .icona{font-size:26px;margin:6px 0}
+  .dia .temps{font-size:17px;font-weight:600}
+  .dia .detall{font-size:11px;color:var(--apagat);margin-top:5px}
+
+  table{width:100%;border-collapse:collapse;font-size:12px;margin-top:4px}
+  th{
+    text-align:left;font-weight:600;font-size:10px;letter-spacing:.1em;
+    text-transform:uppercase;color:var(--apagat);
+    padding:7px 8px;border-bottom:1px solid var(--tinta);white-space:nowrap;
+  }
+  td{padding:6px 8px;border-bottom:1px solid var(--linia);white-space:nowrap}
+  tr:hover td{background:rgba(0,0,0,.025)}
+  .num{text-align:right;font-variant-numeric:tabular-nums}
+  .corr{color:var(--cnn);font-weight:600}
+  .corr.neg{color:var(--extern)}
+
+  .barra{display:inline-block;width:52px;height:7px;background:var(--linia);
+         vertical-align:middle;margin-right:6px}
+  .barra span{display:block;height:100%;background:var(--taronja)}
+
+  .avis{border-left:3px solid;padding:9px 12px;margin:6px 0;font-size:12px;background:#fff}
+  .avis.groc{border-color:var(--groc)}
+  .avis.taronja{border-color:var(--taronja)}
+  .avis.vermell{border-color:var(--vermell)}
+
+  .llegenda{font-size:11px;color:var(--apagat);margin-top:10px;line-height:1.7}
+  .marca{
+    display:inline-block;padding:1px 5px;font-size:10px;letter-spacing:.06em;
+    border:1px solid;margin-right:4px;
+  }
+  .marca.cnn{color:var(--cnn);border-color:var(--cnn)}
+  .marca.ext{color:var(--extern);border-color:var(--extern)}
+
+  footer{
+    margin-top:40px;padding-top:14px;border-top:1px solid var(--linia);
+    font-size:11px;color:var(--apagat);line-height:1.7;
+  }
+  a{color:var(--tinta)}
+  .error{border:1px solid var(--vermell);padding:14px;font-size:12px;color:var(--vermell)}
+
+  .prob{margin:6px 0}
+  .prob-fila{display:flex;align-items:center;gap:8px;font-size:12px;margin:3px 0}
+  .prob-nom{width:170px;color:var(--apagat);flex-shrink:0}
+  .prob-barra{flex:1;height:12px;background:var(--linia);position:relative;min-width:60px}
+  .prob-barra span{display:block;height:100%}
+  .prob-val{width:42px;text-align:right;font-variant-numeric:tabular-nums;font-weight:600}
+  .b-baix span{background:#9fc5e8}
+  .b-mig span{background:var(--taronja)}
+  .b-alt span{background:var(--vermell)}
+
+  .franges{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px;margin-top:8px}
+  .franja{border:1px solid var(--linia);padding:9px 11px;background:#fff}
+  .franja h4{font-size:12px;letter-spacing:.08em;margin-bottom:5px;font-weight:600}
+  .franja .temps{font-size:11px;color:var(--apagat);margin-bottom:6px}
+
+  .destacat{border:1px solid var(--tinta);padding:12px 14px;margin:10px 0;background:#fff}
+  .destacat h3{font-size:11px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:8px}
+  .nota{font-size:11px;color:var(--apagat);line-height:1.6;margin-top:8px;font-style:italic}
+</style>
+</head>
+<body>
+
+<h1>Terrassa Safe · validació de connexió</h1>
+<p class="subtitol">
+  Pàgina tècnica per comprovar que el fitxer <code>prediccio.json</code> publicat
+  automàticament es pot llegir i interpretar. No és la interfície del projecte.
+</p>
+
+<div class="estat" id="estat">
+  <span><span class="punt esperant"></span>Carregant…</span>
+</div>
+
+<div id="contingut"></div>
+
+<footer>
+  Predicció generada per una xarxa neuronal convolucional que corregeix localment
+  la sortida del model numèric d'Open-Meteo. Observacions de referència: estació
+  automàtica YK (XEMA) del Servei Meteorològic de Catalunya.
+  Els avisos oficials provenen del Servei Meteorològic de Catalunya; aquesta pàgina
+  només n'indica l'existència i remet a <a href="https://www.meteo.cat/prediccio/avisos">meteo.cat</a>.
+  <br>Treball de recerca de batxillerat · sense finalitat comercial.
+</footer>
+
+<script>
+const URL_JSON = 'https://raw.githubusercontent.com/mancuernarodolfo-dotcom/terrassa-safe-dades/main/prediccio.json';
+
+const esc = s => String(s).replace(/[&<>"]/g, c => (
+  {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+function hora(iso){ return iso.slice(11,16); }
+function diaCurt(iso){
+  const noms = ['dg','dl','dt','dc','dj','dv','ds'];
+  const d = new Date(iso);
+  return noms[d.getDay()] + ' ' + iso.slice(8,10) + '/' + iso.slice(5,7);
+}
+
+function classeProb(p){
+  if (p >= 0.5) return 'b-alt';
+  if (p >= 0.2) return 'b-mig';
+  return 'b-baix';
+}
+
+function filaProb(nom, p){
+  const pct = (p * 100).toFixed(0);
+  return `<div class="prob-fila">
+    <span class="prob-nom">${esc(nom)}</span>
+    <span class="prob-barra ${classeProb(p)}"><span style="width:${pct}%"></span></span>
+    <span class="prob-val">${pct}%</span>
+  </div>`;
+}
+
+function blocProbabilitats(dia){
+  if (!dia.probabilitats) return '';
+  const p = dia.probabilitats;
+  let html = '<div class="prob">';
+  html += filaProb('Acumulat 12 h > 10 mm', p.acumulat_12h_10mm ?? 0);
+  html += filaProb('Acumulat 12 h > 20 mm', p.acumulat_12h_20mm ?? 0);
+  if ((p.acumulat_12h_60mm ?? 0) > 0.005)
+    html += filaProb('Acumulat 12 h > 60 mm (AEMET)', p.acumulat_12h_60mm);
+  html += filaProb('Alguna hora > 5 mm/h', p.maxim_5mm_h ?? 0);
+  if ((p.maxim_20mm_h ?? 0) > 0.005)
+    html += filaProb('Alguna hora > 20 mm/h (AEMET)', p.maxim_20mm_h);
+  html += '</div>';
+  return html;
+}
+
+function blocFranges(dia){
+  if (!dia.franges || !dia.franges.length) return '';
+  let html = '<div class="franges">';
+  for (const f of dia.franges) {
+    html += `<div class="franja">
+      <h4>${esc(f.franja)} h · ${f.n_hores} h</h4>
+      <div class="temps">${f.temp_min}° – ${f.temp_max}°</div>
+      ${filaProb('&gt; 5 mm acumulats', f.prob_acumulat_5mm ?? 0)}
+      ${filaProb('&gt; 10 mm acumulats', f.prob_acumulat_10mm ?? 0)}
+      ${filaProb('&gt; 2 mm en una hora', f.prob_maxim_2mm_h ?? 0)}
+    </div>`;
+  }
+  return html + '</div>';
+}
+
+function pintar(d){
+  const emes = new Date(d.emissio_utc);
+  const ao = d.avis_oficial;
+  let estatAvis = 'no consultat';
+  if (ao) {
+    if (ao.error) estatAvis = 'no disponible';
+    else estatAvis = ao.hi_ha_avis ? ('actiu · ' + ao.nivell_maxim) : 'cap';
+  }
+
+  document.getElementById('estat').innerHTML = `
+    <span><span class="punt ok"></span><b>JSON llegit correctament</b></span>
+    <span>emès ${esc(emes.toLocaleString('ca-ES'))}</span>
+    <span>versió ${esc(d.versio)}</span>
+    <span>${d.hores.length} hores · ${d.dies.length} dies</span>
+    <span>avís oficial: ${esc(estatAvis)}</span>`;
+
+  let html = '';
+
+  // ── Model ──────────────────────────────────────────────────────────
+  if (d.model) {
+    html += `<h2>Model desplegat</h2><p class="llegenda">
+      ${esc(d.model.run_id || '—')} ·
+      RMSE ${d.model.rmse_cnn ?? '—'} °C enfront de ${d.model.rmse_om ?? '—'} °C
+      d'Open-Meteo (millora del ${d.model.millora_pct ?? '—'} %) ·
+      horitzó ${d.model.horitzo_max_h ?? '—'} h</p>`;
+  }
+
+  // ── Avís oficial ───────────────────────────────────────────────────
+  if (ao && ao.hi_ha_avis) {
+    html += `<h2>Avís oficial</h2>
+      <div class="avis ${esc(ao.nivell_maxim)}">
+        <b>El Servei Meteorològic de Catalunya té un avís actiu</b> per al
+        Vallès Occidental${ao.fenomens?.length ? ' · ' + esc(ao.fenomens.join(', ')) : ''}.
+        <br><a href="${esc(ao.url_oficial)}">Consulta'l a meteo.cat</a>
+      </div>`;
+  }
+
+  // ── Dies ───────────────────────────────────────────────────────────
+  html += '<h2>Resum per dia</h2><div class="dies">';
+  for (const dia of d.dies) {
+    const av = dia.avis_maxim
+      ? `<div class="avis ${esc(dia.avis_maxim)}" style="margin-top:8px;padding:4px 8px">avís ${esc(dia.avis_maxim)}</div>`
+      : '';
+    html += `<div class="dia">
+      <div class="data">${esc(diaCurt(dia.data))} · ${dia.n_hores} h</div>
+      <div class="icona">${dia.meteo_dominant ? esc(dia.meteo_dominant.emoji) : ''}</div>
+      <div class="temps">${dia.temp_min}° – ${dia.temp_max}°</div>
+      <div class="detall">
+        pluja ${dia.precipitacio_total} mm · ratxa ${dia.ratxa_max_kmh} km/h
+      </div>${av}</div>`;
+  }
+  html += '</div>';
+  if (d.dies.some(x => x.n_hores < 24)) {
+    html += `<p class="llegenda">Els dies parcials només cobreixen les hores
+      disponibles des del moment d'emissió, no el dia sencer.</p>`;
+  }
+
+  // ── Probabilitats agregades ────────────────────────────────────────
+  if (d.dies.some(x => x.probabilitats)) {
+    html += '<h2>Probabilitat de precipitació</h2>';
+    if (d.nota_probabilitats)
+      html += `<p class="llegenda">${esc(d.nota_probabilitats)}</p>`;
+    for (const dia of d.dies) {
+      if (!dia.probabilitats) continue;
+      html += `<div class="destacat">
+        <h3>${esc(diaCurt(dia.data))} · ${dia.n_hores} h disponibles</h3>
+        ${blocProbabilitats(dia)}
+        ${blocFranges(dia)}
+      </div>`;
+    }
+    html += `<p class="nota">La mediana de precipitació pot ser baixa i la
+      probabilitat d'acumulat alta alhora: són preguntes diferents. La verificació
+      del sistema mostra que les probabilitats agregades discriminen molt millor
+      (AUC 0,92) que la intensitat horària (AUC 0,50).</p>`;
+  }
+
+  // ── Hores ──────────────────────────────────────────────────────────
+  html += `<h2>Detall hora a hora</h2>
+    <table><thead><tr>
+      <th>quan</th><th></th><th class="num">CNN</th><th class="num">Open-Meteo</th>
+      <th class="num">correcció</th><th class="num">banda</th>
+      <th class="num">pluja</th><th class="num">P&gt;20mm</th>
+      <th class="num">vent</th><th class="num">ratxa</th><th class="num">hum.</th>
+    </tr></thead><tbody>`;
+
+  for (const h of d.hores.slice(0, 48)) {
+    const p = h.prob_pluja_20mm ?? 0;
+    const neg = h.correccio < 0 ? ' neg' : '';
+    html += `<tr>
+      <td>${esc(diaCurt(h.ts_local))} ${esc(hora(h.ts_local))}</td>
+      <td>${h.meteo ? esc(h.meteo.emoji) : ''}</td>
+      <td class="num"><b>${h.temperatura}°</b></td>
+      <td class="num">${h.open_meteo_temp}°</td>
+      <td class="num corr${neg}">${h.correccio > 0 ? '+' : ''}${h.correccio}</td>
+      <td class="num">${h.temperatura_q10}–${h.temperatura_q90}</td>
+      <td class="num">${h.precipitacio}</td>
+      <td class="num"><span class="barra"><span style="width:${(p*100).toFixed(0)}%"></span></span>${(p*100).toFixed(0)}%</td>
+      <td class="num">${h.vent_velocitat} ${esc(h.vent_cardinal)}</td>
+      <td class="num">${h.ratxa_kmh}</td>
+      <td class="num">${h.humitat}%</td>
+    </tr>`;
+  }
+  html += '</tbody></table>';
+  html += `<p class="llegenda">Es mostren les primeres 48 hores de
+    ${d.hores.length}. Temperatura, pluja i vent porten
+    <span class="marca cnn">correcció local</span>; ratxa, icona i nuvolositat
+    venen <span class="marca ext">directes del model numèric</span> i el model
+    no les modifica.</p>`;
+
+  document.getElementById('contingut').innerHTML = html;
+}
+
+async function carregar(){
+  try {
+    const r = await fetch(URL_JSON + '?t=' + Date.now(), {cache:'no-store'});
+    if (!r.ok) throw new Error('HTTP ' + r.status);
+    const d = await r.json();
+    if (!d.hores) throw new Error('El fitxer no conté prediccions');
+    pintar(d);
+  } catch (e) {
+    document.getElementById('estat').innerHTML =
+      `<span><span class="punt ko"></span><b>No s'ha pogut llegir el fitxer</b></span>`;
+    document.getElementById('contingut').innerHTML =
+      `<div class="error"><b>${esc(e.message)}</b><br><br>
+       Comprova que la URL és correcta i que el repositori és públic:<br>
+       <code>${esc(URL_JSON)}</code></div>`;
+  }
+}
+carregar();
+setInterval(carregar, 15 * 60 * 1000);
+</script>
+</body>
+</html>
