@@ -1,6 +1,6 @@
 {
   "versio": "1.2",
-  "emissio_utc": "2026-09-18T20:00:00Z",
+  "emissio_utc": "2026-09-18T23:00:00Z",
   "estacio": {
     "nom": "Terrassa (YK)",
     "lat": 41.5638,
@@ -64,48 +64,13 @@
     "hi_ha_avis": false,
     "nivell_maxim": null,
     "fenomens": [],
-    "consultat_utc": "2026-09-18T20:23:50+00:00",
+    "consultat_utc": "2026-09-18T23:00:52+00:00",
     "font": "Servei Meteorològic de Catalunya",
     "url_oficial": "https://static-m.meteo.cat/ginys/mapaAvisos?language=es&color=f29400&target=_blank",
     "error": null,
     "de_cache": false
   },
   "dies": [
-    {
-      "data": "2026-09-18",
-      "probabilitats": {
-        "acumulat_12h_10mm": 0.0,
-        "acumulat_12h_20mm": 0.0,
-        "acumulat_12h_60mm": 0.0,
-        "maxim_5mm_h": 0.0,
-        "maxim_20mm_h": 0.0
-      },
-      "franges": [
-        {
-          "franja": "18-00",
-          "n_hores": 1,
-          "temp_max": 18.3,
-          "temp_min": 18.3,
-          "prob_acumulat_5mm": 0.0,
-          "prob_acumulat_10mm": 0.0,
-          "prob_maxim_2mm_h": 0.0,
-          "prob_maxim_5mm_h": 0.0
-        }
-      ],
-      "temp_max": 18.3,
-      "temp_min": 18.3,
-      "precipitacio_total": 0.0,
-      "precipitacio_max_12h": 0.0,
-      "ratxa_max_kmh": 4,
-      "meteo_dominant": {
-        "codi": 1,
-        "text": "Poc ennuvolat",
-        "icona": "sol_nuvols",
-        "emoji": "⛅"
-      },
-      "avis_maxim": null,
-      "n_hores": 1
-    },
     {
       "data": "2026-09-19",
       "probabilitats": {
@@ -118,9 +83,9 @@
       "franges": [
         {
           "franja": "00-06",
-          "n_hores": 6,
-          "temp_max": 18.0,
-          "temp_min": 16.6,
+          "n_hores": 4,
+          "temp_max": 17.3,
+          "temp_min": 16.7,
           "prob_acumulat_5mm": 0.0,
           "prob_acumulat_10mm": 0.0,
           "prob_maxim_2mm_h": 0.0,
@@ -159,7 +124,7 @@
       ],
       "temp_max": 26.2,
       "temp_min": 16.3,
-      "precipitacio_total": 0.1,
+      "precipitacio_total": 0.2,
       "precipitacio_max_12h": 0.1,
       "ratxa_max_kmh": 30,
       "meteo_dominant": {
@@ -169,7 +134,7 @@
         "emoji": "⛅"
       },
       "avis_maxim": null,
-      "n_hores": 24
+      "n_hores": 22
     },
     {
       "data": "2026-09-20",
@@ -249,7 +214,7 @@
         {
           "franja": "00-06",
           "n_hores": 6,
-          "temp_max": 19.4,
+          "temp_max": 19.3,
           "temp_min": 19.1,
           "prob_acumulat_5mm": 0.0,
           "prob_acumulat_10mm": 0.0,
@@ -278,9 +243,9 @@
         },
         {
           "franja": "18-00",
-          "n_hores": 5,
+          "n_hores": 6,
           "temp_max": 28.8,
-          "temp_min": 21.8,
+          "temp_min": 21.2,
           "prob_acumulat_5mm": 0.0,
           "prob_acumulat_10mm": 0.0,
           "prob_maxim_2mm_h": 0.0,
@@ -299,143 +264,64 @@
         "emoji": "☀️"
       },
       "avis_maxim": null,
-      "n_hores": 23
+      "n_hores": 24
+    },
+    {
+      "data": "2026-09-22",
+      "probabilitats": {
+        "acumulat_12h_10mm": 0.0,
+        "acumulat_12h_20mm": 0.0,
+        "acumulat_12h_60mm": 0.0,
+        "maxim_5mm_h": 0.0,
+        "maxim_20mm_h": 0.0
+      },
+      "franges": [
+        {
+          "franja": "00-06",
+          "n_hores": 2,
+          "temp_max": 20.9,
+          "temp_min": 20.6,
+          "prob_acumulat_5mm": 0.0,
+          "prob_acumulat_10mm": 0.0,
+          "prob_maxim_2mm_h": 0.0,
+          "prob_maxim_5mm_h": 0.0
+        }
+      ],
+      "temp_max": 20.9,
+      "temp_min": 20.6,
+      "precipitacio_total": 0.0,
+      "precipitacio_max_12h": 0.0,
+      "ratxa_max_kmh": 8,
+      "meteo_dominant": {
+        "codi": 0,
+        "text": "Cel serè",
+        "icona": "sol",
+        "emoji": "☀️"
+      },
+      "avis_maxim": null,
+      "n_hores": 2
     }
   ],
   "hores": [
     {
       "h": 1,
-      "ts_utc": "2026-09-18T21:00:00Z",
-      "ts_local": "2026-09-18T23:00:00+02:00",
-      "lead_dies": 1,
-      "fiabilitat": "alta",
-      "temperatura": 18.3,
-      "temperatura_q10": 17.2,
-      "temperatura_q90": 19.5,
-      "temperatura_font": "cnn",
-      "open_meteo_temp": 19.7,
-      "correccio": -1.4,
-      "precipitacio": 0.0,
-      "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.01,
-      "precipitacio_font": "cnn",
-      "prob_pluja_20mm": 0.0,
-      "vent_velocitat": 0.5,
-      "vent_direccio": 258,
-      "vent_cardinal": "OSO",
-      "vent_font": "cnn",
-      "ratxa_kmh": 4,
-      "ratxa_font": "open_meteo",
-      "humitat": 87,
-      "humitat_font": "cnn_absolut",
-      "irradiancia": 1,
-      "irradiancia_font": "cnn_absolut",
-      "nuvolositat": 7,
-      "nuvolositat_font": "open_meteo",
-      "meteo": {
-        "codi": 1,
-        "text": "Poc ennuvolat",
-        "icona": "lluna_nuvols",
-        "emoji": "☁️"
-      },
-      "meteo_font": "open_meteo",
-      "avisos": []
-    },
-    {
-      "h": 2,
-      "ts_utc": "2026-09-18T22:00:00Z",
-      "ts_local": "2026-09-19T00:00:00+02:00",
-      "lead_dies": 1,
-      "fiabilitat": "alta",
-      "temperatura": 18.0,
-      "temperatura_q10": 16.9,
-      "temperatura_q90": 19.2,
-      "temperatura_font": "cnn",
-      "open_meteo_temp": 18.7,
-      "correccio": -0.7,
-      "precipitacio": 0.0,
-      "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.01,
-      "precipitacio_font": "cnn",
-      "prob_pluja_20mm": 0.0,
-      "vent_velocitat": 0.8,
-      "vent_direccio": 270,
-      "vent_cardinal": "O",
-      "vent_font": "cnn",
-      "ratxa_kmh": 7,
-      "ratxa_font": "open_meteo",
-      "humitat": 85,
-      "humitat_font": "cnn_absolut",
-      "irradiancia": 0,
-      "irradiancia_font": "cnn_absolut",
-      "nuvolositat": 22,
-      "nuvolositat_font": "open_meteo",
-      "meteo": {
-        "codi": 1,
-        "text": "Poc ennuvolat",
-        "icona": "lluna_nuvols",
-        "emoji": "☁️"
-      },
-      "meteo_font": "open_meteo",
-      "avisos": []
-    },
-    {
-      "h": 3,
-      "ts_utc": "2026-09-18T23:00:00Z",
-      "ts_local": "2026-09-19T01:00:00+02:00",
-      "lead_dies": 1,
-      "fiabilitat": "alta",
-      "temperatura": 17.6,
-      "temperatura_q10": 16.5,
-      "temperatura_q90": 18.8,
-      "temperatura_font": "cnn",
-      "open_meteo_temp": 18.0,
-      "correccio": -0.4,
-      "precipitacio": 0.0,
-      "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.01,
-      "precipitacio_font": "cnn",
-      "prob_pluja_20mm": 0.0,
-      "vent_velocitat": 0.7,
-      "vent_direccio": 271,
-      "vent_cardinal": "O",
-      "vent_font": "cnn",
-      "ratxa_kmh": 7,
-      "ratxa_font": "open_meteo",
-      "humitat": 83,
-      "humitat_font": "cnn_absolut",
-      "irradiancia": 0,
-      "irradiancia_font": "cnn_absolut",
-      "nuvolositat": 35,
-      "nuvolositat_font": "open_meteo",
-      "meteo": {
-        "codi": 1,
-        "text": "Poc ennuvolat",
-        "icona": "lluna_nuvols",
-        "emoji": "☁️"
-      },
-      "meteo_font": "open_meteo",
-      "avisos": []
-    },
-    {
-      "h": 4,
       "ts_utc": "2026-09-19T00:00:00Z",
       "ts_local": "2026-09-19T02:00:00+02:00",
       "lead_dies": 1,
       "fiabilitat": "alta",
-      "temperatura": 17.4,
-      "temperatura_q10": 16.2,
-      "temperatura_q90": 18.6,
+      "temperatura": 17.3,
+      "temperatura_q10": 16.0,
+      "temperatura_q90": 18.5,
       "temperatura_font": "cnn",
       "open_meteo_temp": 17.6,
-      "correccio": -0.2,
+      "correccio": -0.3,
       "precipitacio": 0.0,
       "precipitacio_q10": 0.0,
       "precipitacio_q90": 0.02,
       "precipitacio_font": "cnn",
       "prob_pluja_20mm": 0.0,
       "vent_velocitat": 0.7,
-      "vent_direccio": 271,
+      "vent_direccio": 272,
       "vent_cardinal": "O",
       "vent_font": "cnn",
       "ratxa_kmh": 7,
@@ -456,17 +342,17 @@
       "avisos": []
     },
     {
-      "h": 5,
+      "h": 2,
       "ts_utc": "2026-09-19T01:00:00Z",
       "ts_local": "2026-09-19T03:00:00+02:00",
       "lead_dies": 1,
       "fiabilitat": "alta",
-      "temperatura": 17.3,
-      "temperatura_q10": 16.0,
-      "temperatura_q90": 18.5,
+      "temperatura": 17.2,
+      "temperatura_q10": 15.9,
+      "temperatura_q90": 18.4,
       "temperatura_font": "cnn",
       "open_meteo_temp": 17.4,
-      "correccio": -0.1,
+      "correccio": -0.2,
       "precipitacio": 0.0,
       "precipitacio_q10": 0.0,
       "precipitacio_q90": 0.02,
@@ -494,17 +380,17 @@
       "avisos": []
     },
     {
-      "h": 6,
+      "h": 3,
       "ts_utc": "2026-09-19T02:00:00Z",
       "ts_local": "2026-09-19T04:00:00+02:00",
       "lead_dies": 1,
       "fiabilitat": "alta",
-      "temperatura": 16.9,
-      "temperatura_q10": 15.6,
-      "temperatura_q90": 18.1,
+      "temperatura": 17.0,
+      "temperatura_q10": 15.7,
+      "temperatura_q90": 18.2,
       "temperatura_font": "cnn",
       "open_meteo_temp": 17.2,
-      "correccio": -0.3,
+      "correccio": -0.2,
       "precipitacio": 0.0,
       "precipitacio_q10": 0.0,
       "precipitacio_q90": 0.02,
@@ -516,7 +402,7 @@
       "vent_font": "cnn",
       "ratxa_kmh": 8,
       "ratxa_font": "open_meteo",
-      "humitat": 85,
+      "humitat": 83,
       "humitat_font": "cnn_absolut",
       "irradiancia": 0,
       "irradiancia_font": "cnn_absolut",
@@ -532,29 +418,29 @@
       "avisos": []
     },
     {
-      "h": 7,
+      "h": 4,
       "ts_utc": "2026-09-19T03:00:00Z",
       "ts_local": "2026-09-19T05:00:00+02:00",
       "lead_dies": 1,
       "fiabilitat": "alta",
-      "temperatura": 16.6,
-      "temperatura_q10": 15.4,
-      "temperatura_q90": 17.8,
+      "temperatura": 16.7,
+      "temperatura_q10": 15.5,
+      "temperatura_q90": 17.9,
       "temperatura_font": "cnn",
       "open_meteo_temp": 17.1,
-      "correccio": -0.5,
-      "precipitacio": 0.0,
+      "correccio": -0.4,
+      "precipitacio": 0.01,
       "precipitacio_q10": 0.0,
       "precipitacio_q90": 0.02,
       "precipitacio_font": "cnn",
       "prob_pluja_20mm": 0.0,
       "vent_velocitat": 1.1,
-      "vent_direccio": 269,
+      "vent_direccio": 268,
       "vent_cardinal": "O",
       "vent_font": "cnn",
       "ratxa_kmh": 9,
       "ratxa_font": "open_meteo",
-      "humitat": 88,
+      "humitat": 87,
       "humitat_font": "cnn_absolut",
       "irradiancia": 0,
       "irradiancia_font": "cnn_absolut",
@@ -570,7 +456,7 @@
       "avisos": []
     },
     {
-      "h": 8,
+      "h": 5,
       "ts_utc": "2026-09-19T04:00:00Z",
       "ts_local": "2026-09-19T06:00:00+02:00",
       "lead_dies": 1,
@@ -608,7 +494,7 @@
       "avisos": []
     },
     {
-      "h": 9,
+      "h": 6,
       "ts_utc": "2026-09-19T05:00:00Z",
       "ts_local": "2026-09-19T07:00:00+02:00",
       "lead_dies": 1,
@@ -646,7 +532,7 @@
       "avisos": []
     },
     {
-      "h": 10,
+      "h": 7,
       "ts_utc": "2026-09-19T06:00:00Z",
       "ts_local": "2026-09-19T08:00:00+02:00",
       "lead_dies": 1,
@@ -684,7 +570,7 @@
       "avisos": []
     },
     {
-      "h": 11,
+      "h": 8,
       "ts_utc": "2026-09-19T07:00:00Z",
       "ts_local": "2026-09-19T09:00:00+02:00",
       "lead_dies": 1,
@@ -722,7 +608,7 @@
       "avisos": []
     },
     {
-      "h": 12,
+      "h": 9,
       "ts_utc": "2026-09-19T08:00:00Z",
       "ts_local": "2026-09-19T10:00:00+02:00",
       "lead_dies": 1,
@@ -760,7 +646,7 @@
       "avisos": []
     },
     {
-      "h": 13,
+      "h": 10,
       "ts_utc": "2026-09-19T09:00:00Z",
       "ts_local": "2026-09-19T11:00:00+02:00",
       "lead_dies": 1,
@@ -798,7 +684,7 @@
       "avisos": []
     },
     {
-      "h": 14,
+      "h": 11,
       "ts_utc": "2026-09-19T10:00:00Z",
       "ts_local": "2026-09-19T12:00:00+02:00",
       "lead_dies": 1,
@@ -836,7 +722,7 @@
       "avisos": []
     },
     {
-      "h": 15,
+      "h": 12,
       "ts_utc": "2026-09-19T11:00:00Z",
       "ts_local": "2026-09-19T13:00:00+02:00",
       "lead_dies": 1,
@@ -874,7 +760,7 @@
       "avisos": []
     },
     {
-      "h": 16,
+      "h": 13,
       "ts_utc": "2026-09-19T12:00:00Z",
       "ts_local": "2026-09-19T14:00:00+02:00",
       "lead_dies": 1,
@@ -912,7 +798,7 @@
       "avisos": []
     },
     {
-      "h": 17,
+      "h": 14,
       "ts_utc": "2026-09-19T13:00:00Z",
       "ts_local": "2026-09-19T15:00:00+02:00",
       "lead_dies": 1,
@@ -950,7 +836,7 @@
       "avisos": []
     },
     {
-      "h": 18,
+      "h": 15,
       "ts_utc": "2026-09-19T14:00:00Z",
       "ts_local": "2026-09-19T16:00:00+02:00",
       "lead_dies": 1,
@@ -988,7 +874,7 @@
       "avisos": []
     },
     {
-      "h": 19,
+      "h": 16,
       "ts_utc": "2026-09-19T15:00:00Z",
       "ts_local": "2026-09-19T17:00:00+02:00",
       "lead_dies": 1,
@@ -1026,7 +912,7 @@
       "avisos": []
     },
     {
-      "h": 20,
+      "h": 17,
       "ts_utc": "2026-09-19T16:00:00Z",
       "ts_local": "2026-09-19T18:00:00+02:00",
       "lead_dies": 1,
@@ -1064,7 +950,7 @@
       "avisos": []
     },
     {
-      "h": 21,
+      "h": 18,
       "ts_utc": "2026-09-19T17:00:00Z",
       "ts_local": "2026-09-19T19:00:00+02:00",
       "lead_dies": 1,
@@ -1102,7 +988,7 @@
       "avisos": []
     },
     {
-      "h": 22,
+      "h": 19,
       "ts_utc": "2026-09-19T18:00:00Z",
       "ts_local": "2026-09-19T20:00:00+02:00",
       "lead_dies": 1,
@@ -1140,7 +1026,7 @@
       "avisos": []
     },
     {
-      "h": 23,
+      "h": 20,
       "ts_utc": "2026-09-19T19:00:00Z",
       "ts_local": "2026-09-19T21:00:00+02:00",
       "lead_dies": 1,
@@ -1178,7 +1064,7 @@
       "avisos": []
     },
     {
-      "h": 24,
+      "h": 21,
       "ts_utc": "2026-09-19T20:00:00Z",
       "ts_local": "2026-09-19T22:00:00+02:00",
       "lead_dies": 1,
@@ -1216,20 +1102,20 @@
       "avisos": []
     },
     {
-      "h": 25,
+      "h": 22,
       "ts_utc": "2026-09-19T21:00:00Z",
       "ts_local": "2026-09-19T23:00:00+02:00",
-      "lead_dies": 2,
-      "fiabilitat": "mitjana",
+      "lead_dies": 1,
+      "fiabilitat": "alta",
       "temperatura": 19.1,
       "temperatura_q10": 18.0,
-      "temperatura_q90": 20.2,
+      "temperatura_q90": 20.1,
       "temperatura_font": "cnn",
       "open_meteo_temp": 20.3,
       "correccio": -1.2,
-      "precipitacio": 0.0,
+      "precipitacio": 0.01,
       "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.0,
+      "precipitacio_q90": 0.01,
       "precipitacio_font": "cnn",
       "prob_pluja_20mm": 0.0,
       "vent_velocitat": 0.8,
@@ -1238,9 +1124,9 @@
       "vent_font": "cnn",
       "ratxa_kmh": 5,
       "ratxa_font": "open_meteo",
-      "humitat": 89,
+      "humitat": 88,
       "humitat_font": "cnn_absolut",
-      "irradiancia": 4,
+      "irradiancia": 6,
       "irradiancia_font": "cnn_absolut",
       "nuvolositat": 17,
       "nuvolositat_font": "open_meteo",
@@ -1254,11 +1140,11 @@
       "avisos": []
     },
     {
-      "h": 26,
+      "h": 23,
       "ts_utc": "2026-09-19T22:00:00Z",
       "ts_local": "2026-09-20T00:00:00+02:00",
-      "lead_dies": 2,
-      "fiabilitat": "mitjana",
+      "lead_dies": 1,
+      "fiabilitat": "alta",
       "temperatura": 18.5,
       "temperatura_q10": 17.5,
       "temperatura_q90": 19.6,
@@ -1267,7 +1153,7 @@
       "correccio": -0.9,
       "precipitacio": 0.0,
       "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.0,
+      "precipitacio_q90": 0.02,
       "precipitacio_font": "cnn",
       "prob_pluja_20mm": 0.0,
       "vent_velocitat": 0.9,
@@ -1276,9 +1162,9 @@
       "vent_font": "cnn",
       "ratxa_kmh": 7,
       "ratxa_font": "open_meteo",
-      "humitat": 87,
+      "humitat": 86,
       "humitat_font": "cnn_absolut",
-      "irradiancia": 6,
+      "irradiancia": 7,
       "irradiancia_font": "cnn_absolut",
       "nuvolositat": 22,
       "nuvolositat_font": "open_meteo",
@@ -1292,20 +1178,20 @@
       "avisos": []
     },
     {
-      "h": 27,
+      "h": 24,
       "ts_utc": "2026-09-19T23:00:00Z",
       "ts_local": "2026-09-20T01:00:00+02:00",
-      "lead_dies": 2,
-      "fiabilitat": "mitjana",
+      "lead_dies": 1,
+      "fiabilitat": "alta",
       "temperatura": 18.1,
       "temperatura_q10": 17.0,
-      "temperatura_q90": 19.3,
+      "temperatura_q90": 19.2,
       "temperatura_font": "cnn",
       "open_meteo_temp": 18.6,
       "correccio": -0.5,
       "precipitacio": 0.0,
       "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.01,
+      "precipitacio_q90": 0.02,
       "precipitacio_font": "cnn",
       "prob_pluja_20mm": 0.0,
       "vent_velocitat": 1.2,
@@ -1316,7 +1202,7 @@
       "ratxa_font": "open_meteo",
       "humitat": 85,
       "humitat_font": "cnn_absolut",
-      "irradiancia": 3,
+      "irradiancia": 4,
       "irradiancia_font": "cnn_absolut",
       "nuvolositat": 23,
       "nuvolositat_font": "open_meteo",
@@ -1330,7 +1216,7 @@
       "avisos": []
     },
     {
-      "h": 28,
+      "h": 25,
       "ts_utc": "2026-09-20T00:00:00Z",
       "ts_local": "2026-09-20T02:00:00+02:00",
       "lead_dies": 2,
@@ -1368,7 +1254,7 @@
       "avisos": []
     },
     {
-      "h": 29,
+      "h": 26,
       "ts_utc": "2026-09-20T01:00:00Z",
       "ts_local": "2026-09-20T03:00:00+02:00",
       "lead_dies": 2,
@@ -1406,7 +1292,7 @@
       "avisos": []
     },
     {
-      "h": 30,
+      "h": 27,
       "ts_utc": "2026-09-20T02:00:00Z",
       "ts_local": "2026-09-20T04:00:00+02:00",
       "lead_dies": 2,
@@ -1444,7 +1330,7 @@
       "avisos": []
     },
     {
-      "h": 31,
+      "h": 28,
       "ts_utc": "2026-09-20T03:00:00Z",
       "ts_local": "2026-09-20T05:00:00+02:00",
       "lead_dies": 2,
@@ -1482,7 +1368,7 @@
       "avisos": []
     },
     {
-      "h": 32,
+      "h": 29,
       "ts_utc": "2026-09-20T04:00:00Z",
       "ts_local": "2026-09-20T06:00:00+02:00",
       "lead_dies": 2,
@@ -1520,7 +1406,7 @@
       "avisos": []
     },
     {
-      "h": 33,
+      "h": 30,
       "ts_utc": "2026-09-20T05:00:00Z",
       "ts_local": "2026-09-20T07:00:00+02:00",
       "lead_dies": 2,
@@ -1558,7 +1444,7 @@
       "avisos": []
     },
     {
-      "h": 34,
+      "h": 31,
       "ts_utc": "2026-09-20T06:00:00Z",
       "ts_local": "2026-09-20T08:00:00+02:00",
       "lead_dies": 2,
@@ -1596,7 +1482,7 @@
       "avisos": []
     },
     {
-      "h": 35,
+      "h": 32,
       "ts_utc": "2026-09-20T07:00:00Z",
       "ts_local": "2026-09-20T09:00:00+02:00",
       "lead_dies": 2,
@@ -1634,7 +1520,7 @@
       "avisos": []
     },
     {
-      "h": 36,
+      "h": 33,
       "ts_utc": "2026-09-20T08:00:00Z",
       "ts_local": "2026-09-20T10:00:00+02:00",
       "lead_dies": 2,
@@ -1672,7 +1558,7 @@
       "avisos": []
     },
     {
-      "h": 37,
+      "h": 34,
       "ts_utc": "2026-09-20T09:00:00Z",
       "ts_local": "2026-09-20T11:00:00+02:00",
       "lead_dies": 2,
@@ -1710,7 +1596,7 @@
       "avisos": []
     },
     {
-      "h": 38,
+      "h": 35,
       "ts_utc": "2026-09-20T10:00:00Z",
       "ts_local": "2026-09-20T12:00:00+02:00",
       "lead_dies": 2,
@@ -1748,7 +1634,7 @@
       "avisos": []
     },
     {
-      "h": 39,
+      "h": 36,
       "ts_utc": "2026-09-20T11:00:00Z",
       "ts_local": "2026-09-20T13:00:00+02:00",
       "lead_dies": 2,
@@ -1786,7 +1672,7 @@
       "avisos": []
     },
     {
-      "h": 40,
+      "h": 37,
       "ts_utc": "2026-09-20T12:00:00Z",
       "ts_local": "2026-09-20T14:00:00+02:00",
       "lead_dies": 2,
@@ -1824,7 +1710,7 @@
       "avisos": []
     },
     {
-      "h": 41,
+      "h": 38,
       "ts_utc": "2026-09-20T13:00:00Z",
       "ts_local": "2026-09-20T15:00:00+02:00",
       "lead_dies": 2,
@@ -1862,7 +1748,7 @@
       "avisos": []
     },
     {
-      "h": 42,
+      "h": 39,
       "ts_utc": "2026-09-20T14:00:00Z",
       "ts_local": "2026-09-20T16:00:00+02:00",
       "lead_dies": 2,
@@ -1900,7 +1786,7 @@
       "avisos": []
     },
     {
-      "h": 43,
+      "h": 40,
       "ts_utc": "2026-09-20T15:00:00Z",
       "ts_local": "2026-09-20T17:00:00+02:00",
       "lead_dies": 2,
@@ -1938,7 +1824,7 @@
       "avisos": []
     },
     {
-      "h": 44,
+      "h": 41,
       "ts_utc": "2026-09-20T16:00:00Z",
       "ts_local": "2026-09-20T18:00:00+02:00",
       "lead_dies": 2,
@@ -1976,7 +1862,7 @@
       "avisos": []
     },
     {
-      "h": 45,
+      "h": 42,
       "ts_utc": "2026-09-20T17:00:00Z",
       "ts_local": "2026-09-20T19:00:00+02:00",
       "lead_dies": 2,
@@ -2014,7 +1900,7 @@
       "avisos": []
     },
     {
-      "h": 46,
+      "h": 43,
       "ts_utc": "2026-09-20T18:00:00Z",
       "ts_local": "2026-09-20T20:00:00+02:00",
       "lead_dies": 2,
@@ -2052,7 +1938,7 @@
       "avisos": []
     },
     {
-      "h": 47,
+      "h": 44,
       "ts_utc": "2026-09-20T19:00:00Z",
       "ts_local": "2026-09-20T21:00:00+02:00",
       "lead_dies": 2,
@@ -2090,7 +1976,7 @@
       "avisos": []
     },
     {
-      "h": 48,
+      "h": 45,
       "ts_utc": "2026-09-20T20:00:00Z",
       "ts_local": "2026-09-20T22:00:00+02:00",
       "lead_dies": 2,
@@ -2128,14 +2014,14 @@
       "avisos": []
     },
     {
-      "h": 49,
+      "h": 46,
       "ts_utc": "2026-09-20T21:00:00Z",
       "ts_local": "2026-09-20T23:00:00+02:00",
-      "lead_dies": 3,
-      "fiabilitat": "baixa",
+      "lead_dies": 2,
+      "fiabilitat": "mitjana",
       "temperatura": 19.3,
-      "temperatura_q10": 18.0,
-      "temperatura_q90": 20.8,
+      "temperatura_q10": 18.1,
+      "temperatura_q90": 20.7,
       "temperatura_font": "cnn",
       "open_meteo_temp": 20.2,
       "correccio": -0.9,
@@ -2166,20 +2052,20 @@
       "avisos": []
     },
     {
-      "h": 50,
+      "h": 47,
       "ts_utc": "2026-09-20T22:00:00Z",
       "ts_local": "2026-09-21T00:00:00+02:00",
-      "lead_dies": 3,
-      "fiabilitat": "baixa",
-      "temperatura": 19.4,
+      "lead_dies": 2,
+      "fiabilitat": "mitjana",
+      "temperatura": 19.3,
       "temperatura_q10": 18.1,
-      "temperatura_q90": 20.9,
+      "temperatura_q90": 20.7,
       "temperatura_font": "cnn",
       "open_meteo_temp": 19.5,
-      "correccio": -0.1,
+      "correccio": -0.2,
       "precipitacio": 0.0,
       "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.02,
+      "precipitacio_q90": 0.01,
       "precipitacio_font": "cnn",
       "prob_pluja_20mm": 0.0,
       "vent_velocitat": 1.3,
@@ -2188,7 +2074,7 @@
       "vent_font": "cnn",
       "ratxa_kmh": 8,
       "ratxa_font": "open_meteo",
-      "humitat": 77,
+      "humitat": 76,
       "humitat_font": "cnn_absolut",
       "irradiancia": 0,
       "irradiancia_font": "cnn_absolut",
@@ -2204,23 +2090,23 @@
       "avisos": []
     },
     {
-      "h": 51,
+      "h": 48,
       "ts_utc": "2026-09-20T23:00:00Z",
       "ts_local": "2026-09-21T01:00:00+02:00",
-      "lead_dies": 3,
-      "fiabilitat": "baixa",
+      "lead_dies": 2,
+      "fiabilitat": "mitjana",
       "temperatura": 19.3,
-      "temperatura_q10": 18.1,
-      "temperatura_q90": 20.8,
+      "temperatura_q10": 18.2,
+      "temperatura_q90": 20.6,
       "temperatura_font": "cnn",
       "open_meteo_temp": 18.9,
       "correccio": 0.4,
       "precipitacio": 0.0,
       "precipitacio_q10": 0.0,
-      "precipitacio_q90": 0.02,
+      "precipitacio_q90": 0.01,
       "precipitacio_font": "cnn",
       "prob_pluja_20mm": 0.0,
-      "vent_velocitat": 1.2,
+      "vent_velocitat": 1.3,
       "vent_direccio": 262,
       "vent_cardinal": "O",
       "vent_font": "cnn",
@@ -2242,7 +2128,7 @@
       "avisos": []
     },
     {
-      "h": 52,
+      "h": 49,
       "ts_utc": "2026-09-21T00:00:00Z",
       "ts_local": "2026-09-21T02:00:00+02:00",
       "lead_dies": 3,
@@ -2280,7 +2166,7 @@
       "avisos": []
     },
     {
-      "h": 53,
+      "h": 50,
       "ts_utc": "2026-09-21T01:00:00Z",
       "ts_local": "2026-09-21T03:00:00+02:00",
       "lead_dies": 3,
@@ -2318,7 +2204,7 @@
       "avisos": []
     },
     {
-      "h": 54,
+      "h": 51,
       "ts_utc": "2026-09-21T02:00:00Z",
       "ts_local": "2026-09-21T04:00:00+02:00",
       "lead_dies": 3,
@@ -2356,7 +2242,7 @@
       "avisos": []
     },
     {
-      "h": 55,
+      "h": 52,
       "ts_utc": "2026-09-21T03:00:00Z",
       "ts_local": "2026-09-21T05:00:00+02:00",
       "lead_dies": 3,
@@ -2394,7 +2280,7 @@
       "avisos": []
     },
     {
-      "h": 56,
+      "h": 53,
       "ts_utc": "2026-09-21T04:00:00Z",
       "ts_local": "2026-09-21T06:00:00+02:00",
       "lead_dies": 3,
@@ -2432,7 +2318,7 @@
       "avisos": []
     },
     {
-      "h": 57,
+      "h": 54,
       "ts_utc": "2026-09-21T05:00:00Z",
       "ts_local": "2026-09-21T07:00:00+02:00",
       "lead_dies": 3,
@@ -2470,7 +2356,7 @@
       "avisos": []
     },
     {
-      "h": 58,
+      "h": 55,
       "ts_utc": "2026-09-21T06:00:00Z",
       "ts_local": "2026-09-21T08:00:00+02:00",
       "lead_dies": 3,
@@ -2508,7 +2394,7 @@
       "avisos": []
     },
     {
-      "h": 59,
+      "h": 56,
       "ts_utc": "2026-09-21T07:00:00Z",
       "ts_local": "2026-09-21T09:00:00+02:00",
       "lead_dies": 3,
@@ -2546,7 +2432,7 @@
       "avisos": []
     },
     {
-      "h": 60,
+      "h": 57,
       "ts_utc": "2026-09-21T08:00:00Z",
       "ts_local": "2026-09-21T10:00:00+02:00",
       "lead_dies": 3,
@@ -2584,7 +2470,7 @@
       "avisos": []
     },
     {
-      "h": 61,
+      "h": 58,
       "ts_utc": "2026-09-21T09:00:00Z",
       "ts_local": "2026-09-21T11:00:00+02:00",
       "lead_dies": 3,
@@ -2622,7 +2508,7 @@
       "avisos": []
     },
     {
-      "h": 62,
+      "h": 59,
       "ts_utc": "2026-09-21T10:00:00Z",
       "ts_local": "2026-09-21T12:00:00+02:00",
       "lead_dies": 3,
@@ -2660,7 +2546,7 @@
       "avisos": []
     },
     {
-      "h": 63,
+      "h": 60,
       "ts_utc": "2026-09-21T11:00:00Z",
       "ts_local": "2026-09-21T13:00:00+02:00",
       "lead_dies": 3,
@@ -2698,7 +2584,7 @@
       "avisos": []
     },
     {
-      "h": 64,
+      "h": 61,
       "ts_utc": "2026-09-21T12:00:00Z",
       "ts_local": "2026-09-21T14:00:00+02:00",
       "lead_dies": 3,
@@ -2736,7 +2622,7 @@
       "avisos": []
     },
     {
-      "h": 65,
+      "h": 62,
       "ts_utc": "2026-09-21T13:00:00Z",
       "ts_local": "2026-09-21T15:00:00+02:00",
       "lead_dies": 3,
@@ -2774,7 +2660,7 @@
       "avisos": []
     },
     {
-      "h": 66,
+      "h": 63,
       "ts_utc": "2026-09-21T14:00:00Z",
       "ts_local": "2026-09-21T16:00:00+02:00",
       "lead_dies": 3,
@@ -2812,7 +2698,7 @@
       "avisos": []
     },
     {
-      "h": 67,
+      "h": 64,
       "ts_utc": "2026-09-21T15:00:00Z",
       "ts_local": "2026-09-21T17:00:00+02:00",
       "lead_dies": 3,
@@ -2850,7 +2736,7 @@
       "avisos": []
     },
     {
-      "h": 68,
+      "h": 65,
       "ts_utc": "2026-09-21T16:00:00Z",
       "ts_local": "2026-09-21T18:00:00+02:00",
       "lead_dies": 3,
@@ -2888,7 +2774,7 @@
       "avisos": []
     },
     {
-      "h": 69,
+      "h": 66,
       "ts_utc": "2026-09-21T17:00:00Z",
       "ts_local": "2026-09-21T19:00:00+02:00",
       "lead_dies": 3,
@@ -2926,7 +2812,7 @@
       "avisos": []
     },
     {
-      "h": 70,
+      "h": 67,
       "ts_utc": "2026-09-21T18:00:00Z",
       "ts_local": "2026-09-21T20:00:00+02:00",
       "lead_dies": 3,
@@ -2964,7 +2850,7 @@
       "avisos": []
     },
     {
-      "h": 71,
+      "h": 68,
       "ts_utc": "2026-09-21T19:00:00Z",
       "ts_local": "2026-09-21T21:00:00+02:00",
       "lead_dies": 3,
@@ -3002,7 +2888,7 @@
       "avisos": []
     },
     {
-      "h": 72,
+      "h": 69,
       "ts_utc": "2026-09-21T20:00:00Z",
       "ts_local": "2026-09-21T22:00:00+02:00",
       "lead_dies": 3,
@@ -3029,6 +2915,120 @@
       "irradiancia": 0,
       "irradiancia_font": "cnn_absolut",
       "nuvolositat": 6,
+      "nuvolositat_font": "open_meteo",
+      "meteo": {
+        "codi": 0,
+        "text": "Cel serè",
+        "icona": "lluna",
+        "emoji": "🌙"
+      },
+      "meteo_font": "open_meteo",
+      "avisos": []
+    },
+    {
+      "h": 70,
+      "ts_utc": "2026-09-21T21:00:00Z",
+      "ts_local": "2026-09-21T23:00:00+02:00",
+      "lead_dies": 3,
+      "fiabilitat": "baixa",
+      "temperatura": 21.2,
+      "temperatura_q10": 19.8,
+      "temperatura_q90": 22.9,
+      "temperatura_font": "cnn",
+      "open_meteo_temp": 21.6,
+      "correccio": -0.4,
+      "precipitacio": 0.0,
+      "precipitacio_q10": 0.0,
+      "precipitacio_q90": 0.01,
+      "precipitacio_font": "cnn",
+      "prob_pluja_20mm": 0.0,
+      "vent_velocitat": 1.2,
+      "vent_direccio": 265,
+      "vent_cardinal": "O",
+      "vent_font": "cnn",
+      "ratxa_kmh": 6,
+      "ratxa_font": "open_meteo",
+      "humitat": 74,
+      "humitat_font": "cnn_absolut",
+      "irradiancia": 0,
+      "irradiancia_font": "cnn_absolut",
+      "nuvolositat": 0,
+      "nuvolositat_font": "open_meteo",
+      "meteo": {
+        "codi": 0,
+        "text": "Cel serè",
+        "icona": "lluna",
+        "emoji": "🌙"
+      },
+      "meteo_font": "open_meteo",
+      "avisos": []
+    },
+    {
+      "h": 71,
+      "ts_utc": "2026-09-21T22:00:00Z",
+      "ts_local": "2026-09-22T00:00:00+02:00",
+      "lead_dies": 3,
+      "fiabilitat": "baixa",
+      "temperatura": 20.9,
+      "temperatura_q10": 19.6,
+      "temperatura_q90": 22.6,
+      "temperatura_font": "cnn",
+      "open_meteo_temp": 20.6,
+      "correccio": 0.3,
+      "precipitacio": 0.0,
+      "precipitacio_q10": 0.0,
+      "precipitacio_q90": 0.01,
+      "precipitacio_font": "cnn",
+      "prob_pluja_20mm": 0.0,
+      "vent_velocitat": 1.1,
+      "vent_direccio": 266,
+      "vent_cardinal": "O",
+      "vent_font": "cnn",
+      "ratxa_kmh": 6,
+      "ratxa_font": "open_meteo",
+      "humitat": 72,
+      "humitat_font": "cnn_absolut",
+      "irradiancia": 0,
+      "irradiancia_font": "cnn_absolut",
+      "nuvolositat": 0,
+      "nuvolositat_font": "open_meteo",
+      "meteo": {
+        "codi": 0,
+        "text": "Cel serè",
+        "icona": "lluna",
+        "emoji": "🌙"
+      },
+      "meteo_font": "open_meteo",
+      "avisos": []
+    },
+    {
+      "h": 72,
+      "ts_utc": "2026-09-21T23:00:00Z",
+      "ts_local": "2026-09-22T01:00:00+02:00",
+      "lead_dies": 3,
+      "fiabilitat": "baixa",
+      "temperatura": 20.6,
+      "temperatura_q10": 19.3,
+      "temperatura_q90": 22.3,
+      "temperatura_font": "cnn",
+      "open_meteo_temp": 19.9,
+      "correccio": 0.7,
+      "precipitacio": 0.0,
+      "precipitacio_q10": 0.0,
+      "precipitacio_q90": 0.01,
+      "precipitacio_font": "cnn",
+      "prob_pluja_20mm": 0.0,
+      "vent_velocitat": 1.0,
+      "vent_direccio": 266,
+      "vent_cardinal": "O",
+      "vent_font": "cnn",
+      "ratxa_kmh": 8,
+      "ratxa_font": "open_meteo",
+      "humitat": 67,
+      "humitat_font": "cnn_absolut",
+      "irradiancia": 0,
+      "irradiancia_font": "cnn_absolut",
+      "nuvolositat": 0,
       "nuvolositat_font": "open_meteo",
       "meteo": {
         "codi": 0,
